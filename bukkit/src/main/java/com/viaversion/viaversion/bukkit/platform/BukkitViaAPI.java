@@ -48,7 +48,8 @@ public class BukkitViaAPI extends ViaAPIBase<Player> {
             if (player != null && isProtocolSupport()) {
                 return ProtocolSupportUtil.getProtocolVersion(player);
             }
-            return -1;
+            // return -1; // Commented to avoid issues with some shitty plugins that makes the things bad.
+            return 47; // Returning 1.8.x protocol version
         }
         return connection.getProtocolInfo().getProtocolVersion();
     }

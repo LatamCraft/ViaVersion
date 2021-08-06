@@ -28,7 +28,8 @@ import java.util.UUID;
 public class ProtocolInfoImpl implements ProtocolInfo {
     private final UserConnection connection;
     private State state = State.HANDSHAKE;
-    private int protocolVersion = -1;
+    // private int protocolVersion = -1;
+    private int protocolVersion = 47; // avoiding shitty plugins D:
     private int serverProtocolVersion = -1;
     private String username;
     private UUID uuid;
